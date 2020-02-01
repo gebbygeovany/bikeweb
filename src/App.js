@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Container, Col, Row } from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Home } from './layouts/Home';
+import { FAQ } from './layouts/FAQ';
+import { Explore } from './layouts/Explore';
+import { Marketplace } from './layouts/Marketplace';
+import { Layout } from './components/Layout';
+import { NavBar } from './components/NavBar';
+import { SideBar } from './components/SideBar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Router>
+          <NavBar />
+          <Container>
+            <Row>
+              <Col sm={3}>
+                <SideBar />
+              </Col>
+              <Col sm={9}>
+                <Layout>
+                  <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/faq" component={FAQ} />
+                    <Route path="/explore" component={Explore} />
+                    <Route path="/marketplace" component={Marketplace} />
+                  </Switch>
+                </Layout>
+              </Col>
+            </Row>
+          </Container>
+        </Router>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;

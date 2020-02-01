@@ -1,0 +1,44 @@
+import React from 'react'
+import { Link } from 'react-router-dom';
+import { ListGroup, Form, FormControl, Button } from 'react-bootstrap';
+import styled from 'styled-components';
+
+const Styles = styled.div`
+  .side-title {
+      text-align:center;
+  }
+`;
+
+export const SideBar = () => (
+    <Styles>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <ListGroup defaultActiveKey="#link1">
+            <ListGroup.Item className="side-title">
+                COMMUNITY
+            </ListGroup.Item>
+            <Form>
+                <p></p>
+                <FormControl type="text" placeholder="Search.." />
+                <p></p>
+            </Form>
+            <ListGroup.Item action href="#link1">
+                Grup 1
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link2">
+                Grup 2
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link3">
+                Grup 3
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link4">
+                Grup 4
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link5">
+                Grup 5
+            </ListGroup.Item>
+        </ListGroup>
+    </Styles >
+)
