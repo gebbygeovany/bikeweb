@@ -1,9 +1,22 @@
 import React from 'react'
+import { Row, Col } from 'react-bootstrap'
+import { AccorDion } from '../components/Accordion'
+import { SidebarFAQ } from '../components/Sidebar'
+import styled from 'styled-components'
+
+const Styles = styled.div`
+
+`;
 
 export const FAQ = () => (
-    <div>
-        <h2>FAQ</h2>
-        <p>This is FAQ</p>
-        <p>No, this is Patrick</p>
-    </div>
+    <Styles>
+        <Row>
+            <Col sm={3}>
+                <SidebarFAQ />
+            </Col>
+            <Col sm={9}>
+                <AccorDion />
+            </Col>
+        </Row>
+    </Styles>
 )

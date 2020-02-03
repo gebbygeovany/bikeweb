@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown, Image } from 'react-bootstrap';
 import styled from 'styled-components';
+
+import user from '../assets/profile.jpg'
 
 import { faBell, faUser, faBiking } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -65,10 +67,18 @@ export const NavBar = () => (
         </Nav>
         <Nav className="ml-auto">
           <Navbar.Brand className="side-menu">
-            <FontAwesomeIcon icon={faBell} />
+            <a href="">
+              <FontAwesomeIcon icon={faBell} />
+              <span>&nbsp;&nbsp;</span>
+              Notification
+            </a>
           </Navbar.Brand>
           <Navbar.Brand className="side-menu">
-            <FontAwesomeIcon icon={faUser} />
+            <a href="">
+              <Image src={user} width={30} height={30} roundedCircle />
+              <span>&nbsp;&nbsp;</span>
+              User
+            </a>
           </Navbar.Brand>
         </Nav>
       </Navbar.Collapse>

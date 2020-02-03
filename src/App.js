@@ -6,8 +6,7 @@ import { FAQ } from './layouts/FAQ';
 import { Explore } from './layouts/Explore';
 import { Marketplace } from './layouts/Marketplace';
 import { Layout } from './components/Layout';
-import { NavBar } from './components/NavBar';
-import { SideBar } from './components/SideBar';
+import { NavBar } from './components/Navbar';
 
 class App extends Component {
   render() {
@@ -16,11 +15,6 @@ class App extends Component {
         <Router>
           <NavBar />
           <Container>
-            <Row>
-              <Col sm={3}>
-                <SideBar />
-              </Col>
-              <Col sm={9}>
                 <Layout>
                   <Switch>
                     <Route exact path="/" component={Home} />
@@ -29,8 +23,6 @@ class App extends Component {
                     <Route path="/marketplace" component={Marketplace} />
                   </Switch>
                 </Layout>
-              </Col>
-            </Row>
           </Container>
         </Router>
       </React.Fragment>
