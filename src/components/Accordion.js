@@ -36,7 +36,7 @@ export const AccorDion = () => (
                     <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <b>Judul Pertanyaan</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronLeft} />
+                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="1">
                     <Card.Body>Isi jawaban</Card.Body>
@@ -47,7 +47,7 @@ export const AccorDion = () => (
                     <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <b>Judul Pertanyaan</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronLeft} />
+                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="2">
                     <Card.Body>Isi jawaban</Card.Body>
@@ -58,7 +58,7 @@ export const AccorDion = () => (
                     <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <b>Judul Pertanyaan</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronLeft} />
+                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="3">
                     <Card.Body>Isi jawaban</Card.Body>
@@ -69,7 +69,7 @@ export const AccorDion = () => (
                     <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <b>Judul Pertanyaan</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronLeft} />
+                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="4">
                     <Card.Body>Isi jawaban</Card.Body>
@@ -80,7 +80,7 @@ export const AccorDion = () => (
                     <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <b>Judul Pertanyaan</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronLeft} />
+                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="5">
                     <Card.Body>Isi jawaban</Card.Body>
