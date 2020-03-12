@@ -1,0 +1,142 @@
+/* body {
+  background-color: #2D3B48;
+  padding: 20px;
+  margin: 0;
+} */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous|Russo+One&display=swap');
+
+.title {
+  color: white;
+}
+h1, h2, p, ul, li {
+  font-family: sans-serif;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  background-color: #23BA91;
+  padding: 0;
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+.content {
+  background-color: #FFF;
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+.col1{
+  background-color: #23BA91;
+}
+.col2{
+  background-color:brown;
+}
+.col3{
+  background-color:coral;
+}
+.navbar {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 0px 9px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  background-color: #1b1c1d;
+}
+.filterKondisi{
+  font-size: 1px;
+}
+.filterLokasi{
+  color: #23BA91;
+}
+.logo{
+  font-family: 'Righteous', cursive;
+  color: rgb(206, 206, 206);
+}
+.judulBarang{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  width: 100%;
+}
+.ratingBarang{
+  margin-left: 3%;
+}
+.hargaBarang{
+  font-family: 'Roboto', sans-serif; 
+  font-weight: bold;
+  color: rgb(59, 59, 59);
+}
+.nominalHargaBarang{
+  font-family: 'Roboto', sans-serif; 
+  font-weight: bold;
+  color: #FA591D;
+  font-size: x-large;
+  margin-left: 21%;
+  /* vertical-align: center; */
+}
+.hargaBarangGrid{
+  font-family: 'Roboto', sans-serif; 
+  font-weight: bold;
+  color: rgb(59, 59, 59);
+  margin-left: 15%;
+}
+.nominalHargaBarangGrid{
+  font-family: 'Roboto', sans-serif; 
+  font-weight: bold;
+  color: #FA591D;
+  font-size: x-large;
+  /* margin-left: 10%; */
+/* vertical-align: center; */
+}
+.infoBarang{
+  font-family: 'Roboto', sans-serif; 
+  font-weight: bold;
+  font-size: large;
+  margin-left: 5px;
+}
+.headerComment{
+  padding: 0px;
+  
+}
+.headerCom{
+  margin-left: 100px;
+}
+.catatanBarang{
+  font-family: 'Roboto', sans-serif; 
+  color:grey;
+  font-weight: bold;
+  font-size: small;
+
+}
+.btnBeli{
+  font-family: 'Roboto', sans-serif; 
+  color:#ffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+.btnBeliEvent{
+  font-family: 'Roboto', sans-serif; 
+  color:#ffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+.imageEvent{
+  height: 10px;
+}
+.detailEvent{
+  
+  font-weight: 500;
+}
