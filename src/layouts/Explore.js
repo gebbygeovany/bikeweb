@@ -1,9 +1,22 @@
 import React from 'react'
+import { Row, Col } from 'react-bootstrap'
+import { CardColumn } from '../components/CardColumn'
+import { SidebarExplore } from '../components/Sidebar'
+import styled from 'styled-components'
+
+const Styles = styled.div`
+
+`;
 
 export const Explore = () => (
-    <div>
-        <h2>Explore</h2>
-        <p>This is Explore</p>
-        <p>No, this is Patrick</p>
-    </div>
+    <Styles>
+        <Row>
+            <Col sm={3}>
+                <SidebarExplore />
+            </Col>
+            <Col sm={9}>
+                <CardColumn />
+            </Col>
+        </Row>
+    </Styles>
 )

@@ -21,18 +21,19 @@ export const AccorDion = () => (
                 <Accordion.Toggle as={Card.Header} eventKey="0">
                     <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
-                    <b>Sefruit Tutorial</b>
+                    <b>Gowes</b>
                     <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                        Kita masuk ke Binomo, saya akan membuka perdagangan sekarang dan mendapatkan profit sebesar 88 dolar dalam 1 menit. Waktu perdagangan 1 menit. Besar transaksi 100 dolar, saya memprediksi grafik akan naik atau turun. Kemudian saya tunggu sebentar ... lihat, saya mendapat kembali 100 dolar saya dan menghasilkan profit sebesar 88 dolar hanya dalam 1 menit. Bagaimana menurut anda?
+                    Gowes adalah aktivitas mengayuh pedal pada sepeda, dan orang jaman now banyak menyebut kata gowes daripada mengayuh, mungkin dikarnakan lebih simpel dan enak didengar, serta lebih gaul terdengar di telinga.
+                        {/* Kita masuk ke Binomo, saya akan membuka perdagangan sekarang dan mendapatkan profit sebesar 88 dolar dalam 1 menit. Waktu perdagangan 1 menit. Besar transaksi 100 dolar, saya memprediksi grafik akan naik atau turun. Kemudian saya tunggu sebentar ... lihat, saya mendapat kembali 100 dolar saya dan menghasilkan profit sebesar 88 dolar hanya dalam 1 menit. Bagaimana menurut anda? */}
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
             <Card>
                 <Accordion.Toggle as={Card.Header} eventKey="1">
-                <FontAwesomeIcon icon={faQuestionCircle} />
+                    <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <b>Judul Pertanyaan</b>
                     <FontAwesomeIcon className="collapse-icon" icon={faChevronLeft} />
@@ -43,7 +44,7 @@ export const AccorDion = () => (
             </Card>
             <Card>
                 <Accordion.Toggle as={Card.Header} eventKey="2">
-                <FontAwesomeIcon icon={faQuestionCircle} />
+                    <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <b>Judul Pertanyaan</b>
                     <FontAwesomeIcon className="collapse-icon" icon={faChevronLeft} />
@@ -54,7 +55,7 @@ export const AccorDion = () => (
             </Card>
             <Card>
                 <Accordion.Toggle as={Card.Header} eventKey="3">
-                <FontAwesomeIcon icon={faQuestionCircle} />
+                    <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <b>Judul Pertanyaan</b>
                     <FontAwesomeIcon className="collapse-icon" icon={faChevronLeft} />
@@ -65,7 +66,7 @@ export const AccorDion = () => (
             </Card>
             <Card>
                 <Accordion.Toggle as={Card.Header} eventKey="4">
-                <FontAwesomeIcon icon={faQuestionCircle} />
+                    <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <b>Judul Pertanyaan</b>
                     <FontAwesomeIcon className="collapse-icon" icon={faChevronLeft} />
@@ -76,7 +77,7 @@ export const AccorDion = () => (
             </Card>
             <Card>
                 <Accordion.Toggle as={Card.Header} eventKey="5">
-                <FontAwesomeIcon icon={faQuestionCircle} />
+                    <FontAwesomeIcon icon={faQuestionCircle} />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <b>Judul Pertanyaan</b>
                     <FontAwesomeIcon className="collapse-icon" icon={faChevronLeft} />

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Card, Figure, ButtonGroup, Button, Row, Col } from 'react-bootstrap'
+import { Card, Figure, ButtonGroup, Button, Row, Col, Pagination } from 'react-bootstrap'
 import styled from 'styled-components'
-import jamet from '../assets/budi.jpg'
+import budi from '../assets/budi.jpg'
 import profileImage from '../assets/profile.jpg'
 
 import { Fab, Action } from 'react-tiny-fab';
@@ -24,6 +24,11 @@ const Styles = styled.div`
     }
     .thread-name {
         text-align:center;
+        font-size:small;
+    }
+    .pagination {
+        text-align:center;
+        color:black;
     }
 `;
 
@@ -31,7 +36,7 @@ export const HomeThread = () => (
     <Styles>
         <Card>
             <Card.Header className="thread-title">
-                WOW
+                Gowes
             </Card.Header>
             <Card.Body>
                 <blockquote className="blockquote mb-0">
@@ -41,17 +46,18 @@ export const HomeThread = () => (
                                 <Figure.Image
                                     width={90}
                                     height={90}
-                                    src={jamet}
+                                    src={budi}
                                     alt="Foto"
                                     roundedCircle="true"
                                 />
                                 <Figure.Caption className="thread-name">
-                                    Jamet
+                                    Budi Setiawan
                                 </Figure.Caption>
                             </Figure>
                         </Col>
                         <Col md={10} className="thread-text">
-                            Jutaan orang bahkan tidak menyadari bahwa mereka bisa menghasilkan 1000 USD sehari tanpa meninggalkan rumah. Dan Anda adalah salah satu dari mereka. Halo, nama saya Budi Setiawan. Saya seorang trader profesional. Semua yang Anda lihat ini bisa saya raih dalam waktu kurang satu tahun. Setahun yang lalu saya menemukan Binomo. Ini adalah platform. Bagi para pemula pun dapat melakukan transaksi perdagangan. Dan yang seperti saya katakan, saya sekarang bisa menghasilkan lebih dari 1000 USD hanya dengan mencurahkan dua sampai tiga jam waktu saya untuk trading
+                            Gowes adalah aktivitas mengayuh pedal pada sepeda, dan orang jaman now banyak menyebut kata gowes daripada mengayuh, mungkin dikarnakan lebih simpel dan enak didengar, serta lebih gaul terdengar di telinga.
+                            {/* Jutaan orang bahkan tidak menyadari bahwa mereka bisa menghasilkan 1000 USD sehari tanpa meninggalkan rumah. Dan Anda adalah salah satu dari mereka. Halo, nama saya Budi Setiawan. Saya seorang trader profesional. Semua yang Anda lihat ini bisa saya raih dalam waktu kurang satu tahun. Setahun yang lalu saya menemukan Binomo. Ini adalah platform. Bagi para pemula pun dapat melakukan transaksi perdagangan. Dan yang seperti saya katakan, saya sekarang bisa menghasilkan lebih dari 1000 USD hanya dengan mencurahkan dua sampai tiga jam waktu saya untuk trading */}
                         </Col>
                     </Row>
                     <footer className="thread-footer">
@@ -167,6 +173,26 @@ export const HomeThread = () => (
                 </blockquote>
             </Card.Body>
         </Card>
+
+        <br></br>
+        <Pagination className="pagination">
+            <Pagination.First />
+            <Pagination.Prev />
+            <Pagination.Item>{1}</Pagination.Item>
+            <Pagination.Ellipsis />
+
+            <Pagination.Item>{10}</Pagination.Item>
+            <Pagination.Item>{11}</Pagination.Item>
+            <Pagination.Item active>{12}</Pagination.Item>
+            <Pagination.Item>{13}</Pagination.Item>
+            <Pagination.Item>{14}</Pagination.Item>
+
+            <Pagination.Ellipsis />
+            <Pagination.Item>{20}</Pagination.Item>
+            <Pagination.Next />
+            <Pagination.Last />
+        </Pagination>
+
         <Fab
             icon={<FontAwesomeIcon icon={faPlus} />}
             mainButtonStyles={fab_styles}

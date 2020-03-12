@@ -35,7 +35,7 @@ const Styles = styled.div`
 
 export const NavBar = () => (
   <Styles>
-    <Navbar expand="lg">
+    <Navbar expand="lg" fixed="top">
       <Navbar.Brand className="nav-title">
         <FontAwesomeIcon icon={faBiking} />
         {' '}
@@ -56,7 +56,10 @@ export const NavBar = () => (
           </Nav.Item>
           <NavDropdown title="EXPLORE" className="top-menu">
             <NavDropdown.Item>
-              <Link to="/explore">EXPLORE</Link>
+              <Link to="/">EXPLORE</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="/explore">KOMUNITAS</Link>
             </NavDropdown.Item>
           </NavDropdown>
           <Nav.Item className="top-menu">
@@ -83,5 +86,6 @@ export const NavBar = () => (
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+    <br></br><br></br><br></br>
   </Styles >
 )

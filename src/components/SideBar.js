@@ -25,7 +25,7 @@ export const SidebarHome = () => (
                 <p></p>
             </Form>
             <ListGroup.Item action href="#link1">
-                Grup 1
+                Gowes Ngalam
             </ListGroup.Item>
             <ListGroup.Item action href="#link2">
                 Grup 2
@@ -59,7 +59,7 @@ export const SidebarFAQ = () => (
                 <p></p>
             </Form>
             <ListGroup.Item action href="#link1">
-                Topic 1
+                Sepeda
             </ListGroup.Item>
             <ListGroup.Item action href="#link2">
                 Topic 2
@@ -73,6 +73,26 @@ export const SidebarFAQ = () => (
             <ListGroup.Item action href="#link5">
                 Topic 5
             </ListGroup.Item>
+        </ListGroup>
+    </Styles >
+)
+
+export const SidebarExplore = () => (
+    <Styles>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <ListGroup defaultActiveKey="#link1">
+            <ListGroup.Item className="side-title">
+                FILTER
+            </ListGroup.Item>
+            <Form>
+                <p></p>
+                <FormControl type="text" placeholder="Search.." />
+                <p></p>
+            </Form>
+
         </ListGroup>
     </Styles >
 )
