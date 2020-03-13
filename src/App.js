@@ -7,6 +7,7 @@ import { Explore } from './layouts/Explore';
 import { Marketplace } from './layouts/Marketplace';
 import { Layout } from './components/Layout';
 import { NavBar } from './components/Navbar';
+import { Footer } from './components/Footer';
 
 class App extends Component {
   render() {
@@ -15,15 +16,16 @@ class App extends Component {
         <Router>
           <NavBar />
           <Container>
-                <Layout>
-                  <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/faq" component={FAQ} />
-                    <Route path="/explore" component={Explore} />
-                    <Route path="/marketplace" component={Marketplace} />
-                  </Switch>
-                </Layout>
+            <Layout>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/faq" component={FAQ} />
+                <Route path="/explore" component={Explore} />
+                <Route path="/marketplace" component={Marketplace} />
+              </Switch>
+            </Layout>
           </Container>
+          <Footer />
         </Router>
       </React.Fragment>
     );

@@ -8,7 +8,7 @@ const Styles = styled.div`
     .chat-container {
         flex-direction: row;
         height: 500px;
-        overflow-y: auto;
+        overflow-y: scroll;
     }
 
     .chat-feed {
