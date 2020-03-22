@@ -1,6 +1,8 @@
 import React from 'react'
 // import { Link } from 'react-router-dom';
-import { Card, ListGroup, ListGroupItem, Form, FormControl, Accordion, Button } from 'react-bootstrap';
+import { AccordionFilter } from '../components/Accordion'
+import { Card, ListGroup, ListGroupItem, FormControl, Accordion } from 'react-bootstrap';
+import { Form } from 'semantic-ui-react';
 import styled from 'styled-components';
 
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
@@ -110,11 +112,11 @@ export const SidebarExplore = () => (
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
                                     <Form>
-                                        <Form.Group>
-                                            <Form.Check aria-label="option 1">Jabodetabek</Form.Check>
-                                            <Form.Check aria-label="option 2">Jawa Barat</Form.Check>
-                                            <Form.Check aria-label="option 3">Jawa Tengah</Form.Check>
-                                            <Form.Check aria-label="option 1">Jawa Timur</Form.Check>
+                                        <Form.Group grouped>
+                                            <Form.Checkbox label='Jabodetabek' name='color' value='Jabodetabek' />
+                                            <Form.Checkbox label='Jawa Barat' name='color' value='Jawa Barat' />
+                                            <Form.Checkbox label='Jawa Tengah' name='color' value='Jawa Tengah' />
+                                            <Form.Checkbox label='Jawa Timur' name='color' value='Jawa Timur' />
                                         </Form.Group>
                                     </Form>
                                 </Card.Body>
@@ -122,19 +124,11 @@ export const SidebarExplore = () => (
                         </Card>
                         <Card>
                             <Accordion.Toggle eventKey="1">
-                                Lokasi
+                                Jenis Sepeda
                                 <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey="1">
                                 <Card.Body>
-                                    <Form>
-                                        <Form.Group>
-                                            <Form.Check aria-label="option 1">Jabodetabek</Form.Check>
-                                            <Form.Check aria-label="option 2">Jawa Barat</Form.Check>
-                                            <Form.Check aria-label="option 3">Jawa Tengah</Form.Check>
-                                            <Form.Check aria-label="option 1">Jawa Timur</Form.Check>
-                                        </Form.Group>
-                                    </Form>
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>

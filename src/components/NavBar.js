@@ -13,10 +13,15 @@ const Styles = styled.div`
     background-color: #222;
   }
 
+  .nav-background {
+    background-color: #222;
+  }
+
   a, .navbar-brand, .navbar-nav .nav-link {
     font-size:large;
     font-weight:bold;
     color: #bbb;
+    text-decoration: none;
 
     &:hover {
       text-decoration: none;

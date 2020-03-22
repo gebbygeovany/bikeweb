@@ -1,9 +1,8 @@
-import React from 'react'
-import { Accordion, Card } from 'react-bootstrap'
+import React, { Component } from 'react'
+import faker from 'faker'
+import _ from 'lodash'
+import { Accordion, Form, Menu } from 'semantic-ui-react'
 import styled from 'styled-components'
-
-import { faQuestionCircle, faChevronLeft, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Styles = styled.div`
     .collapse-icon {
@@ -11,81 +10,84 @@ const Styles = styled.div`
     }
 `;
 
+const panels = _.times(10, (i) => ({
+    key: `panel-${i}`,
+    title: faker.lorem.sentence(),
+    content: faker.lorem.paragraphs(),
+}))
+
 export const AccorDion = () => (
     <Styles>
-        <br></br>
-        <br></br>
-        <br></br>
-        <Accordion defaultActiveKey="0">
-            <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="0">
-                    <FontAwesomeIcon icon={faQuestionCircle} />
-                    <span>&nbsp;&nbsp;&nbsp;</span>
-                    <b>Gowes</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
-                </Accordion.Toggle>
-                <Accordion.Collapse eventKey="0">
-                    <Card.Body>
-                    Gowes adalah aktivitas mengayuh pedal pada sepeda, dan orang jaman now banyak menyebut kata gowes daripada mengayuh, mungkin dikarnakan lebih simpel dan enak didengar, serta lebih gaul terdengar di telinga.
-                        {/* Kita masuk ke Binomo, saya akan membuka perdagangan sekarang dan mendapatkan profit sebesar 88 dolar dalam 1 menit. Waktu perdagangan 1 menit. Besar transaksi 100 dolar, saya memprediksi grafik akan naik atau turun. Kemudian saya tunggu sebentar ... lihat, saya mendapat kembali 100 dolar saya dan menghasilkan profit sebesar 88 dolar hanya dalam 1 menit. Bagaimana menurut anda? */}
-                    </Card.Body>
-                </Accordion.Collapse>
-            </Card>
-            <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="1">
-                    <FontAwesomeIcon icon={faQuestionCircle} />
-                    <span>&nbsp;&nbsp;&nbsp;</span>
-                    <b>Judul Pertanyaan</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
-                </Accordion.Toggle>
-                <Accordion.Collapse eventKey="1">
-                    <Card.Body>Isi jawaban</Card.Body>
-                </Accordion.Collapse>
-            </Card>
-            <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="2">
-                    <FontAwesomeIcon icon={faQuestionCircle} />
-                    <span>&nbsp;&nbsp;&nbsp;</span>
-                    <b>Judul Pertanyaan</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
-                </Accordion.Toggle>
-                <Accordion.Collapse eventKey="2">
-                    <Card.Body>Isi jawaban</Card.Body>
-                </Accordion.Collapse>
-            </Card>
-            <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="3">
-                    <FontAwesomeIcon icon={faQuestionCircle} />
-                    <span>&nbsp;&nbsp;&nbsp;</span>
-                    <b>Judul Pertanyaan</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
-                </Accordion.Toggle>
-                <Accordion.Collapse eventKey="3">
-                    <Card.Body>Isi jawaban</Card.Body>
-                </Accordion.Collapse>
-            </Card>
-            <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="4">
-                    <FontAwesomeIcon icon={faQuestionCircle} />
-                    <span>&nbsp;&nbsp;&nbsp;</span>
-                    <b>Judul Pertanyaan</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
-                </Accordion.Toggle>
-                <Accordion.Collapse eventKey="4">
-                    <Card.Body>Isi jawaban</Card.Body>
-                </Accordion.Collapse>
-            </Card>
-            <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="5">
-                    <FontAwesomeIcon icon={faQuestionCircle} />
-                    <span>&nbsp;&nbsp;&nbsp;</span>
-                    <b>Judul Pertanyaan</b>
-                    <FontAwesomeIcon className="collapse-icon" icon={faChevronDown} />
-                </Accordion.Toggle>
-                <Accordion.Collapse eventKey="5">
-                    <Card.Body>Isi jawaban</Card.Body>
-                </Accordion.Collapse>
-            </Card>
+        <br></br><br></br><br></br>
+        <Accordion
+            fluid styled
+            defaultActiveIndex={[0]}
+            panels={panels}
+            exclusive={false}
+        >
         </Accordion>
     </Styles>
 )
+
+//accordion filter komunitas
+const ColorForm = (
+    <Form>
+        <Form.Group grouped>
+            <Form.Checkbox label='Red' name='color' value='red' />
+            <Form.Checkbox label='Orange' name='color' value='orange' />
+            <Form.Checkbox label='Green' name='color' value='green' />
+            <Form.Checkbox label='Blue' name='color' value='blue' />
+        </Form.Group>
+    </Form>
+)
+
+const SizeForm = (
+    <Form>
+        <Form.Group grouped>
+            <Form.Radio label='Small' name='size' type='radio' value='small' />
+            <Form.Radio label='Medium' name='size' type='radio' value='medium' />
+            <Form.Radio label='Large' name='size' type='radio' value='large' />
+            <Form.Radio label='X-Large' name='size' type='radio' value='x-large' />
+        </Form.Group>
+    </Form>
+)
+
+export default class AccordionFilter extends Component {
+    state = { activeIndex: 0 }
+
+    handleClick = (e, titleProps) => {
+        const { index } = titleProps
+        const { activeIndex } = this.state
+        const newIndex = activeIndex === index ? -1 : index
+
+        this.setState({ activeIndex: newIndex })
+    }
+
+    render() {
+        const { activeIndex } = this.state
+
+        return (
+            <Accordion as={Menu} vertical>
+                <Menu.Item>
+                    <Accordion.Title
+                        active={activeIndex === 0}
+                        content='Size'
+                        index={0}
+                        onClick={this.handleClick}
+                    />
+                    <Accordion.Content active={activeIndex === 0} content={SizeForm} />
+                </Menu.Item>
+
+                <Menu.Item>
+                    <Accordion.Title
+                        active={activeIndex === 1}
+                        content='Colors'
+                        index={1}
+                        onClick={this.handleClick}
+                    />
+                    <Accordion.Content active={activeIndex === 1} content={ColorForm} />
+                </Menu.Item>
+            </Accordion>
+        )
+    }
+}

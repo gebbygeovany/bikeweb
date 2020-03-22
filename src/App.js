@@ -5,6 +5,7 @@ import { Home } from './layouts/Home';
 import { FAQ } from './layouts/FAQ';
 import { Explore } from './layouts/Explore';
 import { Marketplace } from './layouts/Marketplace';
+import { ThreadDetail } from './layouts/ThreadDetail';
 import { Layout } from './components/Layout';
 import { NavBar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -22,6 +23,7 @@ class App extends Component {
                 <Route path="/faq" component={FAQ} />
                 <Route path="/explore" component={Explore} />
                 <Route path="/marketplace" component={Marketplace} />
+                <Route path="/thread" component={ThreadDetail} />
               </Switch>
             </Layout>
           </Container>

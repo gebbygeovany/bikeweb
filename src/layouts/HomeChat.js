@@ -25,7 +25,7 @@ export const HomeChat = () => (
         </Card>
         <br></br>
         <Form reply>
-            <Form.TextArea placeholder='Enter text here..' />
+            <Form.TextArea rows={2} placeholder='Enter text here..' />
             <Button content='Kirim' labelPosition='left' icon='send' primary />
         </Form>
     </Styles>

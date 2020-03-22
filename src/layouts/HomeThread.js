@@ -85,12 +85,13 @@ export const HomeThread = () => (
             </Card.Body>
         </Card> */}
 
+        <br></br>
         <Item.Group divided>
 
             <Item>
                 <Item.Image size='small' src={budi} />
                 <Item.Content>
-                    <Item.Header as='a'>WOW</Item.Header>
+                    <Item.Header as='a'>Jutaan orang tidak menyadari..</Item.Header>
                     <Item.Meta>
                         <a>Budi Setiawan</a>
                     </Item.Meta>
@@ -98,8 +99,8 @@ export const HomeThread = () => (
                         Jutaan orang bahkan tidak menyadari bahwa mereka bisa menghasilkan 1000 USD sehari tanpa meninggalkan rumah. Dan Anda adalah salah satu dari mereka. Halo, nama saya Budi Setiawan. Saya seorang trader profesional. Semua yang Anda lihat ini bisa saya raih dalam waktu kurang satu tahun.
                 </Item.Description>
                     <Item.Extra>
-                        <Button primary floated='left'>
-                            Read full
+                        <Button primary floated='left' href='/thread'>
+                            Read more
                             <Icon name='right chevron' />
                         </Button>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -125,14 +126,14 @@ export const HomeThread = () => (
                 <Item.Content>
                     <Item.Header as='a'>Gowes</Item.Header>
                     <Item.Meta>
-                        <a>Mamang Garox</a>
+                        <a>Garox</a>
                     </Item.Meta>
                     <Item.Description>
                     Gowes adalah aktivitas mengayuh pedal pada sepeda, dan orang jaman now banyak menyebut kata gowes daripada mengayuh, mungkin dikarnakan lebih simpel dan enak didengar, serta lebih gaul terdengar di telinga.
                 </Item.Description>
                     <Item.Extra>
                         <Button primary floated='left'>
-                            Read full
+                            Read more
                             <Icon name='right chevron' />
                         </Button>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -165,7 +166,73 @@ export const HomeThread = () => (
                 </Item.Description>
                     <Item.Extra>
                         <Button primary floated='left'>
-                            Read full
+                            Read more
+                            <Icon name='right chevron' />
+                        </Button>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <Menu compact>
+                            <Menu.Item as='a'>
+                                <Icon name='thumbs up' color='#' /> 0
+                            </Menu.Item>
+                            <Menu.Item as='a'>
+                                <Icon name='thumbs down' /> 0
+                            </Menu.Item>
+                            <Menu.Item as='a'>
+                                <Icon name='comment' /> 0
+                            </Menu.Item>
+                        </Menu>
+                        <br></br>
+                        <span className="float-right">Posted at: 02-02-2020, 20:20</span>
+                    </Item.Extra>
+                </Item.Content>
+            </Item>
+
+            <Item>
+                <Item.Image size='small' src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                <Item.Content>
+                    <Item.Header as='a'>Lorem Ipsum</Item.Header>
+                    <Item.Meta>
+                        <a>John Doe</a>
+                    </Item.Meta>
+                    <Item.Description>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula libero, fringilla ut risus quis, aliquet molestie augue. Aliquam erat volutpat. Donec dictum, sem eget interdum gravida, lacus justo efficitur arcu, sit amet interdum risus diam vitae tortor.
+                </Item.Description>
+                    <Item.Extra>
+                        <Button primary floated='left'>
+                            Read more
+                            <Icon name='right chevron' />
+                        </Button>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <Menu compact>
+                            <Menu.Item as='a'>
+                                <Icon name='thumbs up' color='#' /> 0
+                            </Menu.Item>
+                            <Menu.Item as='a'>
+                                <Icon name='thumbs down' /> 0
+                            </Menu.Item>
+                            <Menu.Item as='a'>
+                                <Icon name='comment' /> 0
+                            </Menu.Item>
+                        </Menu>
+                        <br></br>
+                        <span className="float-right">Posted at: 02-02-2020, 20:20</span>
+                    </Item.Extra>
+                </Item.Content>
+            </Item>
+
+            <Item>
+                <Item.Image size='small' src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                <Item.Content>
+                    <Item.Header as='a'>Lorem Ipsum</Item.Header>
+                    <Item.Meta>
+                        <a>John Doe</a>
+                    </Item.Meta>
+                    <Item.Description>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula libero, fringilla ut risus quis, aliquet molestie augue. Aliquam erat volutpat. Donec dictum, sem eget interdum gravida, lacus justo efficitur arcu, sit amet interdum risus diam vitae tortor.
+                </Item.Description>
+                    <Item.Extra>
+                        <Button primary floated='left'>
+                            Read more
                             <Icon name='right chevron' />
                         </Button>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

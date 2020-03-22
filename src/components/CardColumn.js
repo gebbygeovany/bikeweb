@@ -1,5 +1,6 @@
 import React from 'react'
 import { CardColumns, Card, Button } from 'react-bootstrap'
+import { Pagination } from 'semantic-ui-react';
 import styled from 'styled-components'
 import bike from '../assets/bike.jpg'
 
@@ -97,5 +98,16 @@ export const CardColumn = () => (
         </Card.Footer>
       </Card>
     </CardColumns>
+
+    <br></br>
+    <Pagination
+      pagination
+      defaultActivePage={1}
+      firstItem={null}
+      lastItem={null}
+      pointing
+      secondary
+      totalPages={10}
+    />
   </Styles>
 )
