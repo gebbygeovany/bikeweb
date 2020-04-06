@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Input, Menu, Segment } from 'semantic-ui-react'
-import Comment from "./Comment";
+import Diskusi from "./Comment";
 import Ulasan from "./Ulasan";
 import DesktipsiBarang from "./DeskripsiBarang";
 
@@ -40,7 +40,7 @@ export default class MenuExamplePointing extends Component {
           <DesktipsiBarang></DesktipsiBarang>
         </Segment>
         <Segment>
-          <Comment ></Comment>
+          <Diskusi ></Diskusi>
         </Segment>
         <Segment>
           <Ulasan></Ulasan>

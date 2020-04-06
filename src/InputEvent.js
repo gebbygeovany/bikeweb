@@ -3,7 +3,6 @@ import { Grid, Header, Button } from 'semantic-ui-react'
 import CardInputEvent from "./CardInputEvent";
 import InputTiket from "./InputTiket";
 import CardListTiket from "./CardListTiket";
-
 import "./style.css";
 
 
@@ -44,7 +43,6 @@ export default class InputEvent extends Component {
                         <InputTiket addTiket={this.addTiket.bind(this)}></InputTiket>
                         <br></br>
                         <br></br>
-
                         <Button color='orange' style={{ width: '100%', height: '3rem' }}>
                             Buat Event Sekarang
                         </Button>
