@@ -8,13 +8,19 @@ import 'semantic-ui-css/semantic.min.css';
 import { Icon, Dropdown, Image, Segment, Container, Grid, Header, List, Divider, } from 'semantic-ui-react';
 import HomeEvent from "./HomeEvent";
 import DetailEvent from "./DetailEvent";
+import LandingPage from "./LandingPage";
+import PembelianEvent from "./PembelianEvent";
+import PembayaranEvent from "./PembayaranEvent";
+import Keranjang from "./Keranjang";
+import CheckoutBarang from "./CheckoutBarang";
+import ModalKeranjang from "./ModalKeranjang";
+import InputEvent from "./InputEvent";
 import Footer from "./Footer";
 import faker from 'faker'
 import { FaShoppingCart, FaBell } from 'react-icons/fa';
 import { MdChat } from 'react-icons/md';
 import { IoMdBicycle } from 'react-icons/io';
-import Comment from "./Comment";
-
+import Comment from "./Comment"
 
 
 class Main extends Component {
@@ -44,31 +50,39 @@ class Main extends Component {
                 <div>
 
                     <Navbar variant='dark' style={{ height: '5rem' }} className="navbar" fixed="top" color='rgb(206, 206, 206)'>
-                        <Navbar.Brand href="#homeBarang" style={{ marginRight: '8px', marginLeft: '50px', marginBottom: '10px' }}>
+                        <Navbar.Brand href="#landingPage" style={{ marginRight: '8px', marginLeft: '50px', marginBottom: '10px' }}>
                             <h1><IoMdBicycle color='rgb(206, 206, 206)'></IoMdBicycle></h1>
                         </Navbar.Brand>
-                        <Navbar.Brand href="#homeBarang" style={{ marginRight: '30px',marginTop: '3px'  }}>
+                        <Navbar.Brand href="#landingPage" style={{ marginRight: '30px', marginTop: '3px' }}>
                             <div className="logo">GOWES</div>
                         </Navbar.Brand>
                         <Nav className="mr-auto">
                             <Nav.Link href="#homeBarang">Shop</Nav.Link>
                             <Nav.Link href="#homeEvent">Event</Nav.Link>
                             <Nav.Link href="">Komunitas</Nav.Link>
-                            <Form inline style={{ marginLeft: '55px' }}>
+                            <Form inline style={{ marginLeft: '50px', width:'auto'}}>
                                 <FormControl variant="outline-dark" type="text" placeholder="Search" className="mr-sm-2" style={{ width: '32rem' }}></FormControl>
                                 <Button variant="outline-secondary" onClick={this.toggleModal.bind(this)} >Search</Button>
                             </Form>
+                            <Nav.Link  href="#Keranjang">
+                                <h5><FaShoppingCart color='grey' style={{ marginLeft: '30px', marginTop: '3px' }}></FaShoppingCart></h5>
+                            </Nav.Link>
 
-                            <h5><FaShoppingCart color='grey' style={{ marginLeft: '45px', marginTop: '8px' }}></FaShoppingCart></h5>
-                            <h5><FaBell color='grey' style={{ marginLeft: '30px', marginTop: '8px' }}></FaBell></h5>
-                            <h5><MdChat color='grey' style={{ marginLeft: '30px ', marginTop: '8px' }}></MdChat></h5>
+                            <Nav.Link href="#inputEvent">
+                                <h5><FaBell color='grey' style={{ marginLeft: '10px', marginTop: '3px' }}></FaBell></h5>
+                            </Nav.Link>
+
+                            <Nav.Link href="#homeBarang">
+                                <h5><MdChat color='grey' style={{ marginLeft: '10px ', marginTop: '3px' }}></MdChat></h5>
+                            </Nav.Link>
+
 
                             <Dropdown
                                 trigger={trigger}
                                 options={options}
                                 pointing='top left'
                                 icon={null}
-                                style={{ marginTop: '4px', marginLeft: '3rem', color:'rgb(206, 206, 206)' }}
+                                style={{ marginTop: '4px', marginLeft: '30px', color: 'rgb(206, 206, 206)' }}
                             />
                         </Nav>
 
@@ -78,13 +92,20 @@ class Main extends Component {
                         <Route path="/homeEvent" component={HomeEvent} />
                         <Route path="/filterLokasi" component={FilterLokasi} />
                         <Route path="/DetailEvent" component={DetailEvent} />
+                        <Route path="/PembelianEvent" component={PembelianEvent} />
+                        <Route path="/PembayaranEvent" component={PembayaranEvent} />
+                        <Route path="/Keranjang" component={Keranjang} />
+                        <Route path="/CheckoutBarang" component={CheckoutBarang} />
+                        <Route path="/LandingPage" component={LandingPage} />
+                        <Route path="/InputEvent" component={InputEvent} />
+
+
 
                     </div>
                     {/* <Comment></Comment> */}
                     <Footer></Footer>
                 </div>
 
-                {/* <ModalKeranjang isOpen={this.state.modalIsOpen}></ModalKeranjang> */}
 
 
             </HashRouter>

@@ -1,13 +1,15 @@
 import React from 'react'
 import { Card, Icon, Image, Container, Header, Button } from 'semantic-ui-react'
 import "./style.css";
+import { Link } from "react-router-dom";
+
 
 
 const description = [
     'Amy is a violinist with 2 years experience in the wedding industry.',
     'She enjoys the outdoors and currently resides in upstate New York.',
 ].join(' ')
-const src1 = 'https://www.freepik.com/blog/app/uploads/2020/01/1316.jpg'
+const src1 = 'https://s3-ap-southeast-1.amazonaws.com/loket-production-sg/images/banner/20200309121707.jpg'
 
 const CardExampleExtraContent = () => (
     <Card style={{ width: '100%' }}>
@@ -40,9 +42,12 @@ const CardExampleExtraContent = () => (
 
         </Card.Content>
         <Card.Content extra>
-            <Button style={{ width: '100%',backgroundColor: '#FA591D', height:'45px' }}>
-                <span className="btnBeli">BELI SEKARANG</span>
-            </Button>
+            <Link to={'./PembelianEvent'}>
+                <Button style={{ width: '100%', backgroundColor: '#FA591D', height: '45px' }}>
+                    <span className="btnBeli">BELI SEKARANG</span>
+                </Button>
+            </Link>
+
         </Card.Content>
     </Card>
 )

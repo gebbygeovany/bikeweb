@@ -14,7 +14,7 @@ class CardBarang extends Component {
         return (
 
             <Link to={'./FilterLokasi'}>
-                <Card style={{ width: '12rem', height: '16rem', float: 'left', margin: '4px' }}>
+                <Card link style={{ width: '12rem', height: '16rem', float: 'left', margin: '4px' }}>
                     <Image src='https://www.mainsepeda.com/thumbs/extra-large/uploads/post/2019/09/05/11.png' wrapped ui={false} />
                     <Card.Content>
                         <Card.Header style={{ fontSize: '16px' }}>{this.props.barang.name}</Card.Header>

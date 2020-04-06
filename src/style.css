@@ -59,13 +59,16 @@ ul.header li a {
 .filterKondisi{
   font-size: 1px;
 }
+
 .filterLokasi{
   color: #23BA91;
 }
+
 .logo{
   font-family: 'Righteous', cursive;
   color: rgb(206, 206, 206);
 }
+
 .judulBarang{
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -124,7 +127,7 @@ ul.header li a {
 .btnBeli{
   font-family: 'Roboto', sans-serif; 
   color:#ffff;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 16px;
 }
 .btnBeliEvent{
@@ -137,6 +140,33 @@ ul.header li a {
   height: 10px;
 }
 .detailEvent{
-  
+    font-weight: 500;
+}
+.namaPenjual{
+  margin-left: 5px;
+  color: #1b1c1d;
+}
+.detailEventTiket{
   font-weight: 500;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.contentEventTiket{
+  font-size: 16px;
+  vertical-align: middle;
+}
+.totalPembayaran{
+  
+  font-weight: bold;
+  font-size: 16px;
+}
+.btnBayarKeranjang{
+  font-family: 'Roboto', sans-serif; 
+  color:#ffff;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.cardTiket{
+  align-items: center;
 }

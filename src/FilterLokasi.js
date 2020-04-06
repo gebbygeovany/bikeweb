@@ -5,6 +5,8 @@ import { Card, Icon, Rating, Image, Item, Label, Button, Grid } from 'semantic-u
 import ContentDetailBarang from "./ContentDetailBarang";
 import MenuDetailBarang from "./MenuDetailBarang";
 import MyCarousel from "./MyCarousel";
+import GambarBarang from "./GambarBarang";
+
 
 
 
@@ -28,7 +30,8 @@ class FilterLokasi extends Component {
               src='https://www.brompton.com/~/media/images/core-site-content/interactive-bike-block/explore/bromptonexplore_740x600.png?h=600&la=en&w=740'
 
             /> */}
-            <MyCarousel ></MyCarousel>
+            {/* <MyCarousel ></MyCarousel> */}
+            <GambarBarang></GambarBarang>
           </Grid.Column>
           <Grid.Column width={1}></Grid.Column>
 

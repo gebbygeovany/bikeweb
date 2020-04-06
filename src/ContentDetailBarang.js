@@ -5,6 +5,7 @@ import { Card, Icon, Rating, Image, Item, Label, Button, Grid } from 'semantic-u
 import { FaBoxOpen } from 'react-icons/fa';
 import JumlahBarang from "./JumlahBarang";
 import CatatanBarang from "./CatatanBarang";
+import { Link } from "react-router-dom";
 
 
 class ContentDetailBarang extends Component {
@@ -13,6 +14,8 @@ class ContentDetailBarang extends Component {
     }
     render() {
         const paragraph = <Image src='/images/wireframe/short-paragraph.png' />
+        const src = 'https://i.ya-webdesign.com/images/avatar-png-1.png'
+
         return (
             <Item.Group divided style={{ width: '93%' }}>
                 <Item >
@@ -26,6 +29,27 @@ class ContentDetailBarang extends Component {
                             <Label>IMAX</Label>
                             <Label icon='globe' content='Additional Languages' />
                         </Item.Extra>
+                    </Item.Content>
+                </Item>
+
+                <Item>
+                    <Item.Content>
+                        <Grid divided='vertically'>
+                            <Grid.Row columns={3}>
+                                <Grid.Column width={4}>
+                                    <span className='hargaBarangGrid'>Penjual</span>
+                                </Grid.Column>
+
+                                <Grid.Column width={5}>
+                                    <Item>
+                                        <Image src={src} size='mini' verticalAlign='middle' />{' '}
+                                        <span className='namaPenjual'>Middle Aligned</span>
+                                    </Item>
+                                </Grid.Column>
+
+
+                            </Grid.Row>
+                        </Grid>
                     </Item.Content>
                 </Item>
 
@@ -50,13 +74,13 @@ class ContentDetailBarang extends Component {
                 <Item>
                     <Item.Content>
                         <Grid divided='vertically'>
-                            <Grid.Row columns={2} style={{paddingBottom:'0px'}}>
+                            <Grid.Row columns={2} style={{ paddingBottom: '0px' }}>
                                 <Grid.Column width={4}>
                                     <span className='hargaBarangGrid'>Jumlah Barang</span>
                                 </Grid.Column>
 
-                                <Grid.Column width={12} style={{marginBottom:'0px'}}>
-                                    
+                                <Grid.Column width={12} style={{ marginBottom: '0px' }}>
+
                                     <JumlahBarang ></JumlahBarang>
                                 </Grid.Column>
                                 <Grid.Column width={4}></Grid.Column>
@@ -95,9 +119,12 @@ class ContentDetailBarang extends Component {
                                     </Grid>
                                 </Grid.Column>
                                 <Grid.Column width={16}>
-                                    <Button  style={{ width: '101%', marginLeft: '2%', marginTop: '20px', height: '45px', backgroundColor:'#FA591D'}}>
-                                        <span className="btnBeli">BELI SEKARANG</span>
-                                    </Button>
+                                    <Link to={'./Keranjang'}>
+                                        <Button style={{ width: '101%', marginLeft: '2%', marginTop: '20px', height: '45px', backgroundColor: '#FA591D' }}>
+                                            <span className="btnBeli">Beli</span>
+                                        </Button>
+                                    </Link>
+
 
                                 </Grid.Column>
 
