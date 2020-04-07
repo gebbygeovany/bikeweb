@@ -24,7 +24,7 @@ class InputTiket extends Component {
     }
 
     addTiketBayar() {
-        this.props.addTiket('Berbayar')
+        this.props.addTiket('Rp50.000')
         this.setState({
             modalBayarIsOpen: !this.state.modalBayarIsOpen,
         });
