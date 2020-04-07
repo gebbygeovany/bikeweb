@@ -197,6 +197,7 @@ class InputTiket extends Component {
             </div>
 
         );
+    
     }
 }
 export default InputTiket;
