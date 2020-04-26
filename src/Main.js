@@ -13,14 +13,14 @@ import PembelianEvent from "./PembelianEvent";
 import PembayaranEvent from "./PembayaranEvent";
 import Keranjang from "./Keranjang";
 import CheckoutBarang from "./CheckoutBarang";
-import ModalKeranjang from "./ModalKeranjang";
 import InputEvent from "./InputEvent";
+import InputBarang from "./InputBarang";
+import Profile from "./Profile";
 import Footer from "./Footer";
 import faker from 'faker'
 import { FaShoppingCart, FaBell } from 'react-icons/fa';
 import { MdChat } from 'react-icons/md';
 import { IoMdBicycle } from 'react-icons/io';
-import Comment from "./Comment"
 
 
 class Main extends Component {
@@ -59,7 +59,7 @@ class Main extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link href="#homeBarang">Shop</Nav.Link>
                             <Nav.Link href="#homeEvent">Event</Nav.Link>
-                            <Nav.Link href="">Komunitas</Nav.Link>
+                            <Nav.Link href="#profile">Komunitas</Nav.Link>
                             <Form inline style={{ marginLeft: '50px', width:'auto'}}>
                                 <FormControl variant="outline-dark" type="text" placeholder="Search" className="mr-sm-2" style={{ width: '32rem' }}></FormControl>
                                 <Button variant="outline-secondary" onClick={this.toggleModal.bind(this)} >Search</Button>
@@ -72,7 +72,7 @@ class Main extends Component {
                                 <h5><FaBell color='grey' style={{ marginLeft: '10px', marginTop: '3px' }}></FaBell></h5>
                             </Nav.Link>
 
-                            <Nav.Link href="#homeBarang">
+                            <Nav.Link href="#inputBarang">
                                 <h5><MdChat color='grey' style={{ marginLeft: '10px ', marginTop: '3px' }}></MdChat></h5>
                             </Nav.Link>
 
@@ -98,11 +98,11 @@ class Main extends Component {
                         <Route path="/CheckoutBarang" component={CheckoutBarang} />
                         <Route path="/LandingPage" component={LandingPage} />
                         <Route path="/InputEvent" component={InputEvent} />
-
+                        <Route path="/InputBarang" component={InputBarang} />
+                        <Route path="/Profile" component={Profile} />
 
 
                     </div>
-                    {/* <Comment></Comment> */}
                     <Footer></Footer>
                 </div>
 

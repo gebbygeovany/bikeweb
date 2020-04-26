@@ -20,7 +20,6 @@ export default class InputEvent extends Component {
     }
 
 
-
     render() {
 
         let listTiket = this.state.tiket.map(tiket => {

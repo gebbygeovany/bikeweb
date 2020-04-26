@@ -2,10 +2,7 @@ import React, { Component, useState } from "react";
 import "./style.css";
 import 'semantic-ui-css/semantic.min.css';
 import { Card, Form, Grid, Button } from 'semantic-ui-react';
-import { Link } from "react-router-dom";
 import { FiPlusCircle } from 'react-icons/fi';
-import InputEvent from "./InputEvent";
-import ModalTambahTiket from "./ModalTambahTiket";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
@@ -77,8 +74,6 @@ class InputTiket extends Component {
                                             <h1 style={{ paddingTop: '20px', paddingLeft: '12px', color: '#1678c2' }}><FiPlusCircle></FiPlusCircle></h1>
                                         </Grid.Column>
                                     </Grid.Row>
-
-
                                 </Grid>
                             </Card>
                         </Grid.Column>
@@ -100,8 +95,6 @@ class InputTiket extends Component {
                                             <h1 style={{ paddingTop: '20px', paddingLeft: '12px', color: '#1678c2' }}><FiPlusCircle></FiPlusCircle></h1>
                                         </Grid.Column>
                                     </Grid.Row>
-
-
                                 </Grid>
                             </Card>
                         </Grid.Column>
@@ -192,12 +185,9 @@ class InputTiket extends Component {
                             </Button>
                         </Form>
                     </ModalBody>
-
                 </Modal>
             </div>
-
         );
-    
     }
 }
 export default InputTiket;
